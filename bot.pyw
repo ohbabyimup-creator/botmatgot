@@ -8,7 +8,7 @@ import mss.tools
 import io
 
 # === CONFIGURATION ===
-TOKEN = 'MTM0NDg2OTI3MDQyOTEwNjI1Nw.GwNyvm.M_njTDkeTyXN7VpkT4MQYXqsBnNKTMeS2XOXF0'
+TOKEN = 'PLACEHOLDER'
 SYNC_CHANNEL_ID = 1515494790576209930  
 PREFIX = "."  
 # =====================
