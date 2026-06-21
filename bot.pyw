@@ -179,7 +179,7 @@ async def on_message(message):
             try: await message.delete()
             except Exception: pass
 
-        # 5. Active Target Switcher
+        # 5. Active Target Switcher ###VERY BUGGY, idk if mic selceting works on all microphones
         elif message.content.startswith("📢 BOT_SIGNAL:MIC_SELECT:"):
             try:
                 selection = message.content.split(":")[-1].strip()
