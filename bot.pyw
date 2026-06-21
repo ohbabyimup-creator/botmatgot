@@ -10,7 +10,7 @@ import urllib.request
 import subprocess
 
 # === CONFIGURATION ===
-TOKEN = 'PLACEHOLDER'  # Leave as 'PLACEHOLDER' on GitHub
+TOKEN = 'PLACEHOLDER' 
 SYNC_CHANNEL_ID = 1515494790576209930  
 PREFIX = "."  
 # =====================
@@ -23,8 +23,7 @@ class MyBot(discord.Client):
         self.voice_client = None
         self.current_mic_id = 0  
         self.audio_task = None   
-        self.boot_time = time.time()  # Track precise initialization epoch
-
+        self.boot_time = time.time() 
 client = MyBot()
 
 class MicrophoneAudioSource(discord.AudioSource):
